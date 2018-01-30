@@ -1,0 +1,107 @@
+html, body {
+  height: 100%;
+}
+body {
+  font-family: sans-serif;
+  background: linear-gradient(-90deg, rgba(0,150,148, 0.7), rgba(0,118,206, 0.5)),
+              url('../img/glenn-carstens-peters.jpg');
+  background-size: cover;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+#todo-list-cont {
+  max-width: 100%;
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  background: rgba(225, 225, 225, 0.75);
+  padding: 50px 30px;
+  border-radius: 5px;
+}
+
+h1 {
+  margin-top: 0px;
+  text-transform: capitalize;
+}
+
+#new-todo {
+  font-size: 15px;
+  border: none;
+  padding: 3px;
+}
+
+#add-item-btn {
+  background: #333;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px 11px;
+  border: none;
+  margin-top: -3px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  position: relative;
+  list-style: none;
+  width: 93%;
+  text-align: left;
+  background: linear-gradient(-90deg, #009694, #00CECB);
+  color: #fff;
+  font-size: 25px;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0px;
+}
+
+li .delete {
+  position: absolute;
+  right: 10px;
+  top: 11px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  background: #333;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+}
+
+li:after {
+  font-family: "Font Awesome 5 Solid";
+  content = "\f14a";
+  margin-right: 0.5em;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.fas {
+  margin-right: 5px;
+}
+
+/*** custom checkboxes ***/
+input[type=checkbox] { display:none; } /* to hide the checkbox itself */
+input[type=checkbox] + label:before {
+  font-family: FontAwesome;
+  display: inline-block;
+}
+
+input[type=checkbox] + label:before { content: "\f096"; } /* unchecked icon */
+input[type=checkbox] + label:before { letter-spacing: 10px; } /* space between checkbox and label */
+
+input[type=checkbox]:checked + label:before { content: "\f046"; } /* checked icon */
+input[type=checkbox]:checked + label:before { letter-spacing: 5px; } /* allow space for check mark */
