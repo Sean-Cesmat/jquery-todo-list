@@ -79,5 +79,7 @@ $(document).ready(function() {
 
     $('#new-todo').val('').focus();
   }
+  $( "ul" ).sortable();
+  $( "ul" ).disableSelection();
   loadList();
 });
